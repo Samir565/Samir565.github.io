@@ -1,18 +1,16 @@
-ANIMATED ELECTRICAL ENGINEERING PORTFOLIO
+DARK ANIMATED ELECTRICAL ENGINEERING PORTFOLIO
+
+Current design:
+- Full dark navy/black engineering theme
+- Electric cyan/blue accents
+- Animated circuit network
+- Rotating circuit rings around the profile image
+- Typing animation
+- Scroll reveal animations
+- Animated project engineering visuals
+- Count-up hero statistics: 06 Core EE Domains, 35+ Engineering Projects, 20+ Engineering Tools
+- Selected Electrical Engineering coursework
+- Responsive mobile navigation
 
 Add Muhammad Samir Malik's photograph beside index.html and name it exactly:
 profile.png
-
-Then open index.html.
-
-Animations included:
-- Live animated circuit network in hero
-- Typing specialties
-- Rotating circuit rings around profile
-- Scroll reveal
-- Animated project visuals (waveform, VLSI glow, feedback-control ball)
-- Count-up statistics
-- Hover transitions
-- Fully responsive mobile navigation
-
-The engineering visuals are built directly with SVG/CSS, so there are no external stock-image licensing dependencies.
