@@ -1,15 +1,12 @@
-DARK INTERACTIVE ELECTRICAL ENGINEERING PORTFOLIO
+V3 — VISUAL REPAIR
 
-Major upgrade:
-- Four full-width featured engineering project sections
-- Smart Metering: animated 3-phase waveforms + live energy display
-- ML / Signal Processing: raw-to-filtered animated waveform + firing NN nodes
-- Neuromorphic VLSI: glowing animated chip and signal pulses
-- Ball Balancing: animated ball/platform feedback-control visualization
-- Separate Engineering Foundation section
-- Four interactive coursework nodes with expandable course groups
-- Dark PCB/circuit visual language retained
-- Hero circuit network, typing, counters and scroll animations retained
-- Fully responsive
+This build fixes the project-animation rendering issue visible in V2:
+- SVG waveform paths are explicitly non-filled, preventing giant black shapes.
+- Smart Metering animation is constrained inside a proper instrument panel.
+- Live kWh reading, L1/L2/L3 voltage cards and 3-phase traces are separated visually.
+- Signal-processing SVGs are explicitly contained and non-filled.
+- Project text and animations use a stable two-column layout.
+- Mobile breakpoints stack cleanly.
+- VLSI, control-system, coursework-node, hero and scroll animations remain enabled.
 
-Place the real photo beside index.html as: profile.png
+Add the real profile image as profile.png beside index.html.
