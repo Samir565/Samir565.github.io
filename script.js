@@ -6,3 +6,13 @@ const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.targ
 const nums=new IntersectionObserver(es=>es.forEach(e=>{if(!e.isIntersecting)return;let el=e.target,n=+el.dataset.n,v=0,t=setInterval(()=>{v=Math.min(n,v+Math.ceil(n/30));el.textContent=v+(el.dataset.plus==="true"?"+":"");if(v===n)clearInterval(t)},35);nums.unobserve(el)}));$$("[data-n]").forEach(e=>nums.observe(e));
 const cv=$("#circuit"),x=cv.getContext("2d");let p=[];function size(){let d=devicePixelRatio||1;cv.width=innerWidth*d;cv.height=innerHeight*d;x.setTransform(d,0,0,d,0,0);p=Array.from({length:25},()=>({x:Math.random()*innerWidth,y:Math.random()*innerHeight,dx:(Math.random()-.5)*.18,dy:(Math.random()-.5)*.18}))}size();addEventListener("resize",size);
 function draw(){x.clearRect(0,0,innerWidth,innerHeight);p.forEach((a,i)=>{a.x+=a.dx;a.y+=a.dy;if(a.x<0||a.x>innerWidth)a.dx*=-1;if(a.y<0||a.y>innerHeight)a.dy*=-1;x.fillStyle="#2563eb66";x.beginPath();x.arc(a.x,a.y,2,0,7);x.fill();p.slice(i+1).forEach(b=>{let z=Math.hypot(a.x-b.x,a.y-b.y);if(z<170){x.strokeStyle=`rgba(37,99,235,${.12*(1-z/170)})`;x.beginPath();x.moveTo(a.x,a.y);x.lineTo(b.x,a.y);x.lineTo(b.x,b.y);x.stroke()}})});requestAnimationFrame(draw)}if(!matchMedia("(prefers-reduced-motion:reduce)").matches)draw();
+// Project micro-interactions
+const energyEl=document.getElementById("energyValue"), errorEl=document.getElementById("errorValue");
+if(energyEl) setInterval(()=>{energyEl.textContent=(12.40+Math.random()*.18).toFixed(2)},1600);
+if(errorEl) setInterval(()=>{errorEl.textContent=(Math.random()*.12).toFixed(2)},900);
+document.querySelectorAll(".domain-node").forEach(node=>{
+  node.addEventListener("click",()=>{
+    document.querySelectorAll(".domain-node").forEach(n=>n.classList.remove("active"));
+    node.classList.add("active");
+  });
+});
